@@ -1,0 +1,55 @@
+            ------
+            Rothsmith Properties Helper
+            ------
+            Doug Rothauser
+            ------
+
+Rothsmith Properties Helper
+
+  The purpose of this project is to provide functions to assist working 
+  with various system properties.  For example those provided by properties files 
+  and those served up by the execution environment.
+  
+* Properties Files
+
+	* Use {{{../site/apidocs/com/rothsmith/properties/PropertyFileInitializer.html}PropertyFileInitializer}}
+	to easily load a Properties object from an external properties file or a properties
+	that exists in the classpath.
+	
+	<Sample Usage for loading an external properties file>:
+	
+%{include|source=src/test/java/com/rothsmith/properties/PropertyFileInitFileTest.java|snippet=#initPropsFromFile}
+	
+	* Use to easily load a Properties object from a properties file in the classpath.
+	
+	<Sample Usage for loading a properties file that exists in the classpath>:
+	
+%{include|source=src/test/java/com/rothsmith/properties/PropertyFileInitResourceTest.java|snippet=#initPropsFromResource}
+
+* Server Environment Variable
+
+	* Use {{{../site/apidocs/com/rothsmith/environment/rothsmithEnv.html}rothsmithEnv}} to get the 
+	current system environment as based on the <<rothsmith_ENV>> system environment variable
+	defined at the OS level.
+	
+	<Sample Usage>:
+	
+%{include|source=src/test/java/com/rothsmith/environment/EnvTest.java|snippet=#getEnv}
+
+	This method will return one of the following values:
+	
+	* SBX - Sandbox/local testing (if there's no rothsmith_ENV 
+	environment varialbe defined, the environment will assumed to be <Sandbox>).
+	
+	* DEV - Development environment
+	 
+	* TST - Testing environment 
+	
+	* QA  - QA environment 
+	
+	* STG - Staging/Pre-production envionment 
+	
+	* PRD - Production Environment 
+  
+
+  
