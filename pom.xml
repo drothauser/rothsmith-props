@@ -1,11 +1,15 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<artifactId>rothsmith-common</artifactId>
-		<groupId>com.rothsmith</groupId>
-		<version>1.2.0-SNAPSHOT</version>
+		<groupId>net.rothsmith</groupId>
+		<artifactId>rothsmith-parent</artifactId>
+		<version>1.0.0</version>
 	</parent>
-	<artifactId>rothsmith-props</artifactId> 
+	
+	<artifactId>rothsmith-props</artifactId>
+	<version>${revision}${changelist}</version>
 
 	<ciManagement>
 		<system>Jenkins</system>
@@ -13,12 +17,20 @@
 	</ciManagement>
 	<inceptionYear>2012</inceptionYear>
 
+	<properties>
+		<revision>1.0.0</revision>
+		<changelist>-SNAPSHOT</changelist>
+		<checkstyle.config>${basedir}/checkstyle_checks.xml</checkstyle.config>
+		<pmd.rulesfile>${basedir}/pmdrules.xml</pmd.rulesfile>
+	</properties>
+
 	<scm>
 		<connection>scm:git:git@github.com:drothauser/rothsmith-props.git</connection>
 		<developerConnection>scm:git:git@github.com:drothauser/rothsmith-props.git</developerConnection>
 		<url>https://github.com/drothauser/rothsmith-props.git</url>
 		<tag>HEAD</tag>
 	</scm>
+
 	<organization>
 		<name>Rothsmith, LLC</name>
 		<url>http://www.rothsmith.com/</url>
