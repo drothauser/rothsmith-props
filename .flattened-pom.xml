@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>net.rothsmith</groupId>
+    <artifactId>rothsmith-parent</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  <groupId>net.rothsmith</groupId>
+  <artifactId>rothsmith-props</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <inceptionYear>2012</inceptionYear>
+  <organization>
+    <name>Rothsmith, LLC</name>
+    <url>http://www.rothsmith.com/</url>
+  </organization>
+  <scm>
+    <connection>scm:git:git@github.com:drothauser/rothsmith-props.git</connection>
+    <developerConnection>scm:git:git@github.com:drothauser/rothsmith-props.git</developerConnection>
+    <url>https://github.com/drothauser/rothsmith-props.git</url>
+  </scm>
+  <ciManagement>
+    <system>Jenkins</system>
+    <url>http://ec2-54-69-215-107.us-west-2.compute.amazonaws.com:8081/nexus/content/sites/site/rothsmith-props</url>
+  </ciManagement>
+  <properties>
+    <revision>1.0.0</revision>
+    <changelist>-SNAPSHOT</changelist>
+    <checkstyle.config>${basedir}/checkstyle_checks.xml</checkstyle.config>
+    <pmd.rulesfile>${basedir}/pmdrules.xml</pmd.rulesfile>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+    </dependency>
+  </dependencies>
+</project>
