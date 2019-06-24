@@ -9,7 +9,7 @@
   </parent>
   <groupId>net.rothsmith</groupId>
   <artifactId>rothsmith-props</artifactId>
-  <version>1.0.0-100</version>
+  <version>1.0.0-SNAPSHOT</version>
   <inceptionYear>2012</inceptionYear>
   <organization>
     <name>Rothsmith, LLC</name>
